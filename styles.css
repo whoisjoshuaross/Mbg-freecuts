@@ -6,7 +6,6 @@
 }
 
 * { box-sizing: border-box; }
-
 html, body { margin:0; padding:0; overflow-x:hidden; }
 
 body {
@@ -17,19 +16,19 @@ body {
 
 .wrap { width: min(1100px, 92%); margin: 0 auto; }
 
-/* ===== HERO as BACKGROUND (Option B) ===== */
+/* ===== HERO as BACKGROUND ===== */
 .hero.hero-bg {
-  /* overlay (first) + background image (second) */
+  /* overlay (first) + art (second) */
   background:
     linear-gradient(rgba(15,18,34,0.30), rgba(15,18,34,0.30)),
     url('mbg_logo.png') center/cover no-repeat;
   padding: 40px 0 28px;
 }
 
-/* Hide the inline <img class="logo"> if present inside hero-bg */
+/* Hide inline logo when using background mode */
 .hero-bg .logo { display:none; }
 
-/* Layout inside hero */
+/* Hero content */
 .hero-inner {
   display: grid;
   grid-template-columns: 1fr;    /* mobile: stacked */
@@ -43,7 +42,7 @@ h1 { font-size: clamp(32px, 6vw, 56px); line-height:1.08; margin: 0 0 8px; }
 .details { list-style:none; padding:0; margin:0 0 16px; display:grid; gap:8px; }
 .details li { background: rgba(255,255,255,.06); padding:10px 12px; border-radius:10px; }
 
-/* CTA + QR row */
+/* CTA + QR */
 .cta-row {
   display: grid;
   grid-template-columns: 1fr;
@@ -63,14 +62,12 @@ h1 { font-size: clamp(32px, 6vw, 56px); line-height:1.08; margin: 0 0 8px; }
   letter-spacing:.2px;
   box-shadow:0 6px 18px rgba(226,76,59,.35);
 }
-
 .cta.outline {
   background:transparent;
   outline:2px solid var(--gold);
   color:var(--gold);
   box-shadow:none;
 }
-
 .cta.small { padding:10px 14px; font-size:14px; }
 
 /* QR block */
@@ -91,7 +88,7 @@ h1 { font-size: clamp(32px, 6vw, 56px); line-height:1.08; margin: 0 0 8px; }
 .footer { padding:24px 0 48px; color:rgba(255,255,255,.7); text-align:center; }
 .footer a { color:var(--gold); }
 
-/* Larger screens: place hero text/QR beside background art area */
+/* Wider screens: put text + QR beside the art area */
 @media (min-width: 1000px) {
   .hero-inner { grid-template-columns: 1.1fr 0.9fr; }
   .cta-row { grid-template-columns: auto 1fr; }
@@ -99,7 +96,7 @@ h1 { font-size: clamp(32px, 6vw, 56px); line-height:1.08; margin: 0 0 8px; }
   .embed iframe { max-width: 720px; margin:0 auto; }
 }
 
-/* Mobile tweaks */
+/* Mobile tweak: slightly bigger QR on phones */
 @media (max-width: 600px) {
   .qr img { width: 200px; }
 }
