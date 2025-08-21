@@ -65,3 +65,37 @@
   </footer>
 </body>
 </html>
+/* --- Extra polish --- */
+
+/* Make hero art a little smaller on phones */
+.hero img {
+  max-width: 90%;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Center the Google Form card on mobile */
+.card {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Keep form readable on wide screens */
+.embed iframe {
+  max-width: 700px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Tighter spacing for big screens */
+@media (min-width: 900px) {
+  .hero-inner {
+    align-items: center;
+  }
+  .hero img {
+    max-width: 85%;
+  }
+  .card {
+    max-width: 750px;
+  }
+}
