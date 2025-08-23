@@ -121,3 +121,10 @@ h3 { margin: 0 0 8px; }
   .embed iframe { height: 1450px; max-width: 780px; margin: 0 auto; }
   .card { max-width: 820px; }
 }
+/* Hide any leftover top CTA/QR pieces in the hero */
+.hero .cta,
+.hero .qr,
+.hero .qr-caption,
+.hero img[alt*="Booksy"] {
+  display: none !important;
+}
